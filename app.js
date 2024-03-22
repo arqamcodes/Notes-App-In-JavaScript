@@ -74,3 +74,116 @@ document.getElementById("submit").addEventListener("click", function() {
 
    
 });
+
+
+
+
+
+
+
+// document.getElementById("createNote").addEventListener("click", function() {
+//   // Create a new note container
+//   let newNote = document.createElement("div");
+//   newNote.className = "notes-container";
+
+//   // Create input element for note title
+//   let noteTitle = document.createElement("input");
+//   noteTitle.setAttribute('placeholder', 'Enter Note Title');
+//   noteTitle.setAttribute('id', 'note-titlemsg');
+  
+  
+//   let titleLabel = document.createElement("label");
+//   titleLabel.textContent = "Notes ";
+//   titleLabel.classList.add("note-header-title");
+
+//   noteTitle.classList.add("note-title");
+
+//   // Create textarea element for note content
+//   let noteContent = document.createElement("textarea");
+//   noteContent.setAttribute('placeholder', 'Enter Note Content');
+//   noteContent.classList.add("note-title");
+
+
+//   let saveButton = document.createElement("button");
+//   saveButton.textContent = "Save";
+//   saveButton.setAttribute("id","save-button");
+//   saveButton.classList.add("save-button");
+//   // Append title and content to the new note container
+//   newNote.appendChild(saveButton);
+//   newNote.appendChild(titleLabel);
+//   newNote.appendChild(noteTitle);
+//   newNote.appendChild(document.createElement("br"));
+//   newNote.appendChild(document.createElement("br"));
+//   newNote.appendChild(noteContent);
+
+//   // Append the new note container to the "notes" container
+//   document.getElementById("notes").appendChild(newNote);
+// });
+
+
+
+document.getElementById("createNote").addEventListener("click", function() {
+  // Create a new note container
+  let newNote = document.createElement("div");
+  newNote.className = "notes-container";
+
+
+  let titleLabel = document.createElement("label");
+   titleLabel.textContent = "Notes ";
+  titleLabel.classList.add("note-header-title");
+  // Create input element for note title
+  let noteTitle = document.createElement("input");
+  noteTitle.setAttribute('placeholder', 'Enter Note Title');
+  noteTitle.setAttribute('id', 'note-titlemsg');
+  noteTitle.classList.add("note-title");
+
+  // Create input element for note content
+  let noteContent = document.createElement("textarea");
+  noteContent.setAttribute('placeholder', 'Enter Note Content');
+  noteContent.classList.add("note-content");
+
+  let saveButton = document.createElement("button");
+  saveButton.textContent = "Save";
+  saveButton.setAttribute("id","save-button");
+  saveButton.classList.add("save-button");
+
+  // Append title and content to the new note container
+  newNote.appendChild(titleLabel);
+  newNote.appendChild(saveButton);
+  newNote.appendChild(document.createElement("br"));
+  newNote.appendChild(document.createElement("br"));
+  newNote.appendChild(noteTitle);
+  newNote.appendChild(document.createElement("br"));
+  newNote.appendChild(document.createElement("br"));
+  newNote.appendChild(noteContent);
+
+  // Append the new note container to the "notes" container
+  document.getElementById("notes").appendChild(newNote);
+
+  saveButton.addEventListener("click", function() {
+
+   
+
+    // Get the user input values
+    let titleValue = noteTitle.value;
+    let contentValue = noteContent.value;
+
+    // Clear the note container
+    newNote.innerHTML = "";
+
+    // Create heading and paragraph elements with user input values
+    let titleHeading = document.createElement("h2");
+    titleHeading.textContent = titleValue;
+
+    let contentParagraph = document.createElement("p");
+    contentParagraph.textContent = contentValue;
+
+    // Append heading and paragraph elements to the note container
+    newNote.appendChild(titleHeading);
+    newNote.appendChild(contentParagraph);
+  });
+});
+
+
+
+
