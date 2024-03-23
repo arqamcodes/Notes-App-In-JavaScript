@@ -81,44 +81,9 @@ document.getElementById("submit").addEventListener("click", function() {
 
 
 
-// document.getElementById("createNote").addEventListener("click", function() {
-//   // Create a new note container
-//   let newNote = document.createElement("div");
-//   newNote.className = "notes-container";
-
-//   // Create input element for note title
-//   let noteTitle = document.createElement("input");
-//   noteTitle.setAttribute('placeholder', 'Enter Note Title');
-//   noteTitle.setAttribute('id', 'note-titlemsg');
-  
-  
-//   let titleLabel = document.createElement("label");
-//   titleLabel.textContent = "Notes ";
-//   titleLabel.classList.add("note-header-title");
-
-//   noteTitle.classList.add("note-title");
-
-//   // Create textarea element for note content
-//   let noteContent = document.createElement("textarea");
-//   noteContent.setAttribute('placeholder', 'Enter Note Content');
-//   noteContent.classList.add("note-title");
 
 
-//   let saveButton = document.createElement("button");
-//   saveButton.textContent = "Save";
-//   saveButton.setAttribute("id","save-button");
-//   saveButton.classList.add("save-button");
-//   // Append title and content to the new note container
-//   newNote.appendChild(saveButton);
-//   newNote.appendChild(titleLabel);
-//   newNote.appendChild(noteTitle);
-//   newNote.appendChild(document.createElement("br"));
-//   newNote.appendChild(document.createElement("br"));
-//   newNote.appendChild(noteContent);
 
-//   // Append the new note container to the "notes" container
-//   document.getElementById("notes").appendChild(newNote);
-// });
 
 
 
@@ -147,7 +112,13 @@ document.getElementById("createNote").addEventListener("click", function() {
   saveButton.setAttribute("id","save-button");
   saveButton.classList.add("save-button");
 
+  let removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+  removeButton.setAttribute("id","remove-button");
+  removeButton.classList.add("remove-btn");
+
   // Append title and content to the new note container
+  newNote.appendChild(removeButton);
   newNote.appendChild(titleLabel);
   newNote.appendChild(saveButton);
   newNote.appendChild(document.createElement("br"));
@@ -162,7 +133,7 @@ document.getElementById("createNote").addEventListener("click", function() {
 
   saveButton.addEventListener("click", function() {
 
-   
+    removeButton.classList.add("remove-after-input");
 
     // Get the user input values
     let titleValue = noteTitle.value;
@@ -181,8 +152,18 @@ document.getElementById("createNote").addEventListener("click", function() {
     // Append heading and paragraph elements to the note container
     newNote.appendChild(titleHeading);
     newNote.appendChild(contentParagraph);
+    newNote.appendChild(removeButton);
   });
+
+ document.getElementById("remove-button");
+  removeButton.addEventListener("click", function() {
+    newNote.remove();
+    newNote.style.opacity = '0';
 });
+
+
+});
+
 
 
 
