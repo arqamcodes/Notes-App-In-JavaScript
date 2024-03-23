@@ -4,4 +4,8 @@ With the ability to seamlessly add, remove, and customize notes, users can tailo
 
 This user-friendly interface provides a streamlined experience for organizing and accessing important information <3
 
+Welcome Screen:
 ![1](https://github.com/arqamcodes/Notes-App-In-JavaScript/assets/68507521/087a7411-b993-47b7-a4f7-83c8dabf54ed)
+
+Web App UI:
+![2](https://github.com/arqamcodes/Notes-App-In-JavaScript/assets/68507521/e0270f48-66c2-4ea1-9d80-cace2035ac09)
