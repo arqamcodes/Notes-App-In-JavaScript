@@ -94,6 +94,7 @@
 .new-note{
     border-radius: 4px;
     border: none;
+    opacity: 100%;
    
 }
 .new-note:hover{
@@ -128,6 +129,18 @@
     border: none;
 
 }
+.remove-btn{
+    position: absolute;
+    transform: translate(100%,660%);
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+}
+.remove-btn:hover{
+    background-color: rgb(255, 203, 98);
+}
 .save-button:hover{
     background-color: rgb(255, 203, 98);
 }
@@ -144,4 +157,10 @@
     color: white;
     font-family:Arial, Helvetica, sans-serif;
     
+    
 }
+.remove-after-input{
+    transform: translate(-10%,320%);
+}
+
+
